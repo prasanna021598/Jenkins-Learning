@@ -5,10 +5,27 @@ pipeline {
         timeout(time: 1, unit: 'SECONDS')
     }
     stages {
-        stage('Example') {
+        stage('Build') {
             steps {
                 echo 'Hello World'
             }
         }
     }
+
+    stages {
+        stage('Test') {
+            steps {
+                echo 'Testing'
+            }
+        }
+    }
+    stages {
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the new code'
+            }
+        }
+    }
+
 }
+
